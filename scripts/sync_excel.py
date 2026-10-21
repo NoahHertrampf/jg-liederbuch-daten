@@ -13,16 +13,31 @@ OUTPUT_FILE = Path("lieder.json")
 
 def main():
     with tempfile.TemporaryDirectory() as temp_dir:
-        excel_path = Path(temp_dir) / "lieder.xlsx"
+    excel_path = Path(temp_dir) / "lieder.xlsx"
 
-        request = urllib.request.Request(
-            EXCEL_URL,
-            headers={"User-Agent": "JG-Liederbuch-Sync/1.0"},
+    download_url = EXCEL_URL
+    if "download=1" not in download_url:
+        separator = "&" if "?" in download_url else "?"
+        download_url += separator + "download=1"
+
+    request = urllib.request.Request(
+        download_url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "*/*",
+        },
+    )
+
+    with urllib.request.urlopen(request, timeout=60) as response:
+        file_data = response.read()
+
+    if not file_data.startswith(b"PK"):
+        raise ValueError(
+            "OneDrive hat keine Excel-Datei geliefert. "
+            "Bitte Freigabelink und Download prüfen."
         )
 
-        with urllib.request.urlopen(request, timeout=60) as response:
-            excel_path.write_bytes(response.read())
-
+    excel_path.write_bytes(file_data)
         workbook = load_workbook(
             excel_path,
             read_only=True,
