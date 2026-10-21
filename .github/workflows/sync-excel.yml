@@ -1,0 +1,42 @@
+name: Excel zu JSON synchronisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository herunterladen
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Benötigte Pakete installieren
+        run: pip install requests openpyxl
+
+      - name: Excel auslesen und JSON erstellen
+        env:
+          ONEDRIVE_EXCEL_URL: ${{ secrets.ONEDRIVE_EXCEL_URL }}
+        run: python scripts/sync_excel.py
+
+      - name: Änderungen speichern
+        run: |
+          if ! git diff --quiet -- lieder.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add lieder.json
+            git commit -m "Excel-Daten aktualisieren"
+            git push
+          else
+            echo "Keine Änderungen gefunden."
+          fi
