@@ -74,6 +74,7 @@ def main():
         required = [
             "Titel",
             "Interpret",
+            "Liedtext",
             "Ausgabe 17",
             "Ausgabe 18",
             "Ausgabe 19",
@@ -102,6 +103,19 @@ def main():
             if title is None or str(title).strip() == "":
                 continue
 
+            def edition_value(name):
+                value = get_value(name)
+
+                if value is None or str(value).strip() == "":
+                    return None
+
+                if isinstance(value, (int, float)):
+                    if value <= 0:
+                        return None
+                    return int(value)
+
+                return value
+
             song = {
                 "id": str(len(songs) + 1),
                 "titel": str(title).strip(),
@@ -110,21 +124,22 @@ def main():
                     if get_value("Interpret") is not None
                     else ""
                 ),
-                "ausgabe17": get_value("Ausgabe 17"),
-                "ausgabe18": get_value("Ausgabe 18"),
-                "ausgabe19": get_value("Ausgabe 19"),
+                "liedtext": (
+                    str(get_value("Liedtext"))
+                    if get_value("Liedtext") is not None
+                    else ""
+                ),
+                "ausgabe17": edition_value("Ausgabe 17"),
+                "ausgabe18": edition_value("Ausgabe 18"),
+                "ausgabe19": edition_value("Ausgabe 19"),
             }
-
-            for key in ("ausgabe17", "ausgabe18", "ausgabe19"):
-                if song[key] == "":
-                    song[key] = None
 
             songs.append(song)
 
     finally:
         workbook.close()
 
-    # JSON-Datei schreiben; Liedtexte werden nicht übernommen
+    # JSON-Datei inklusive Liedtexte schreiben
     output = Path("lieder.json")
     output.write_text(
         json.dumps(songs, ensure_ascii=False, indent=2) + "\n",
@@ -132,7 +147,7 @@ def main():
     )
 
     print(f"{len(songs)} Lieder erfolgreich verarbeitet.")
-    print("Liedtexte wurden nicht in lieder.json übernommen.")
+    print("Liedtexte wurden in lieder.json übernommen.")
 
 
 if __name__ == "__main__":
