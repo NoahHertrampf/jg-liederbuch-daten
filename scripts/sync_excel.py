@@ -7,25 +7,21 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 EXCEL_URL = os.environ["ONEDRIVE_EXCEL_URL"]
-
 WORKSHEET_NAME = "Lieder"
 OUTPUT_FILE = Path("lieder.json")
-
-
-def download_excel(url, destination):
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "JG-Liederbuch-Sync/1.0"},
-    )
-
-    with urllib.request.urlopen(request, timeout=60) as response:
-        destination.write_bytes(response.read())
 
 
 def main():
     with tempfile.TemporaryDirectory() as temp_dir:
         excel_path = Path(temp_dir) / "lieder.xlsx"
-        download_excel(EXCEL_URL, excel_path)
+
+        request = urllib.request.Request(
+            EXCEL_URL,
+            headers={"User-Agent": "JG-Liederbuch-Sync/1.0"},
+        )
+
+        with urllib.request.urlopen(request, timeout=60) as response:
+            excel_path.write_bytes(response.read())
 
         workbook = load_workbook(
             excel_path,
@@ -40,11 +36,10 @@ def main():
 
         sheet = workbook[WORKSHEET_NAME]
         rows = sheet.iter_rows(values_only=True)
-
         headers = next(rows, None)
 
         if not headers:
-            raise ValueError("Die Excel-Datei enthält keine Kopfzeile.")
+            raise ValueError("Excel-Datei enthält keine Kopfzeile.")
 
         headers = [
             str(value).strip() if value is not None else ""
@@ -63,4 +58,48 @@ def main():
         missing = [name for name in required if name not in headers]
 
         if missing:
-            raise ValueEr
+            raise ValueError(
+                "Fehlende Excel-Spalten: " + ", ".join(missing)
+            )
+
+        column = {name: headers.index(name) for name in required}
+        songs = []
+
+        for row in rows:
+            def value(name):
+                index = column[name]
+                return row[index] if index < len(row) else None
+
+            title = value("Titel")
+
+            if title is None or not str(title).strip():
+                continue
+
+            def edition(name):
+                number = value(name)
+                if isinstance(number, (int, float)) and number > 0:
+                    return int(number)
+                return None
+
+            songs.append({
+                "id": str(len(songs) + 1),
+                "titel": str(title).strip(),
+                "interpret": str(value("Interpret") or "").strip(),
+                "liedtext": str(value("Liedtext") or ""),
+                "ausgabe17": edition("Ausgabe 17"),
+                "ausgabe18": edition("Ausgabe 18"),
+                "ausgabe19": edition("Ausgabe 19"),
+            })
+
+        workbook.close()
+
+        OUTPUT_FILE.write_text(
+            json.dumps(songs, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+        print(f"{len(songs)} Lieder exportiert.")
+
+
+if __name__ == "__main__":
+    main()
