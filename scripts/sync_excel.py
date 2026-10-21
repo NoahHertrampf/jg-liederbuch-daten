@@ -110,15 +110,15 @@ try:
         if title is None or str(title).strip() == "":
             continue
 
-        song = {
-            "id": str(len(songs) + 1),
-            "titel": str(title).strip(),
-            "interpret": (
-                str(get_value("Interpret")).strip()
-                if get_value("Interpret") is not None
-                else ""
-            ),
-            "ausgabe17": get_value("Ausgabe 17"),
-            "ausgabe18": get_value("Ausgabe 18"),
-            "ausgabe19": get_value("Ausgabe 19"),
-        }
+            song = {
+                "id": str(len(songs) + 1),
+                "titel": str(title).strip(),
+                "interpret": (
+                    str(get_value("Interpret")).strip()
+                    if get_value("Interpret") is not None
+                    else ""
+                ),
+                "ausgabe17": get_value("Ausgabe 17"),
+                "ausgabe18": get_value("Ausgabe 18"),
+                "ausgabe19": get_value("Ausgabe 19"),
+            }
