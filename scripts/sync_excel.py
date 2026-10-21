@@ -24,10 +24,7 @@ def main():
             .rstrip("=")
         )
         share_id = "u!" + share_token
-        download_url = (
-            f"https://api.onedrive.com/v1.0/shares/"
-            f"{share_id}/root/content"
-        )
+        download_url = EXCEL_URL
 
         request = urllib.request.Request(
             download_url,
