@@ -15,14 +15,31 @@ encoded = base64.urlsafe_b64encode(
     share_url.encode("utf-8")
 ).decode("ascii").rstrip("=")
 
-download_url = (
-    f"https://api.onedrive.com/v1.0/shares/u!{encoded}/root/content"
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+
+# OneDrive-Freigabelink für einen Downloadversuch vorbereiten
+parts = urlparse(share_url)
+params = parse_qs(parts.query)
+params["download"] = ["1"]
+
+download_url = urlunparse(
+    parts._replace(query=urlencode(params, doseq=True))
 )
 
-# Excel-Datei herunterladen
-response = requests.get(download_url, timeout=60)
+response = requests.get(
+    download_url,
+    timeout=60,
+    allow_redirects=True,
+)
+
 response.raise_for_status()
 
+# Prüfen, ob tatsächlich eine Excel-Datei geladen wurde
+if not response.content.startswith(b"PK"):
+    raise ValueError(
+        "OneDrive hat keine Excel-Datei geliefert. "
+        "Der Freigabelink muss anders aufgerufen werden."
+    )
 # Excel-Datei öffnen
 workbook = load_workbook(
     BytesIO(response.content),
