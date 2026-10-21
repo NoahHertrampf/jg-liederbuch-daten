@@ -13,31 +13,32 @@ OUTPUT_FILE = Path("lieder.json")
 
 def main():
     with tempfile.TemporaryDirectory() as temp_dir:
-    excel_path = Path(temp_dir) / "lieder.xlsx"
+        excel_path = Path(temp_dir) / "lieder.xlsx"
 
-    download_url = EXCEL_URL
-    if "download=1" not in download_url:
-        separator = "&" if "?" in download_url else "?"
-        download_url += separator + "download=1"
+        download_url = EXCEL_URL
+        if "download=1" not in download_url:
+            separator = "&" if "?" in download_url else "?"
+            download_url += separator + "download=1"
 
-    request = urllib.request.Request(
-        download_url,
-        headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "*/*",
-        },
-    )
-
-    with urllib.request.urlopen(request, timeout=60) as response:
-        file_data = response.read()
-
-    if not file_data.startswith(b"PK"):
-        raise ValueError(
-            "OneDrive hat keine Excel-Datei geliefert. "
-            "Bitte Freigabelink und Download prüfen."
+        request = urllib.request.Request(
+            download_url,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "*/*",
+            },
         )
 
-    excel_path.write_bytes(file_data)
+        with urllib.request.urlopen(request, timeout=60) as response:
+            file_data = response.read()
+
+        if not file_data.startswith(b"PK"):
+            raise ValueError(
+                "OneDrive hat keine Excel-Datei geliefert. "
+                "Bitte Freigabelink und Download prüfen."
+            )
+
+        excel_path.write_bytes(file_data)
+
         workbook = load_workbook(
             excel_path,
             read_only=True,
@@ -71,7 +72,6 @@ def main():
         ]
 
         missing = [name for name in required if name not in headers]
-
         if missing:
             raise ValueError(
                 "Fehlende Excel-Spalten: " + ", ".join(missing)
@@ -86,7 +86,6 @@ def main():
                 return row[index] if index < len(row) else None
 
             title = value("Titel")
-
             if title is None or not str(title).strip():
                 continue
 
@@ -114,7 +113,6 @@ def main():
         )
 
         print(f"{len(songs)} Lieder exportiert.")
-
 
 if __name__ == "__main__":
     main()
