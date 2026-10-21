@@ -9,106 +9,98 @@ from openpyxl import load_workbook
 
 
 def main():
-    # OneDrive-Freigabelink aus den GitHub Secrets lesen
     share_url = os.environ.get("ONEDRIVE_EXCEL_URL", "").strip()
 
     if not share_url:
         raise ValueError("Das GitHub Secret ONEDRIVE_EXCEL_URL fehlt.")
 
-# OneDrive-Link für einen Downloadversuch vorbereiten
-parts = urlparse(share_url)
-params = parse_qs(parts.query)
-params["download"] = ["1"]
+    # OneDrive-Downloadlink vorbereiten
+    parts = urlparse(share_url)
+    params = parse_qs(parts.query)
+    params["download"] = ["1"]
 
-download_url = urlunparse(
-    parts._replace(query=urlencode(params, doseq=True))
-)
-
-# Excel-Datei herunterladen
-response = requests.get(
-    download_url,
-    timeout=60,
-    allow_redirects=True,
-)
-response.raise_for_status()
-
-# Prüfen, ob tatsächlich eine Excel-Datei geladen wurde
-if not response.content.startswith(b"PK"):
-    raise ValueError(
-        "OneDrive hat keine Excel-Datei geliefert. "
-        "Der Freigabelink muss anders aufgerufen werden."
+    download_url = urlunparse(
+        parts._replace(query=urlencode(params, doseq=True))
     )
 
-# Excel-Datei öffnen
-workbook = load_workbook(
-    BytesIO(response.content),
-    read_only=True,
-    data_only=True,
-)
+    # Excel-Datei herunterladen
+    response = requests.get(
+        download_url,
+        timeout=60,
+        allow_redirects=True,
+    )
+    response.raise_for_status()
 
-try:
-    if "Lieder" not in workbook.sheetnames:
+    if not response.content.startswith(b"PK"):
         raise ValueError(
-            "Das Tabellenblatt 'Lieder' wurde nicht gefunden."
+            "OneDrive hat keine Excel-Datei geliefert. "
+            "Bitte den Freigabelink prüfen."
         )
 
-    worksheet = workbook["Lieder"]
+    # Excel-Datei öffnen
+    workbook = load_workbook(
+        BytesIO(response.content),
+        read_only=True,
+        data_only=True,
+    )
 
-    # Excel-Zeilen einschließlich Überschriften auslesen
-    rows = list(worksheet.iter_rows(values_only=True))
+    try:
+        if "Lieder" not in workbook.sheetnames:
+            raise ValueError(
+                f"Tabellenblatt 'Lieder' nicht gefunden. "
+                f"Vorhanden: {workbook.sheetnames}"
+            )
 
-    # Leere Zeilen am Ende entfernen
-    while rows and all(value is None for value in rows[-1]):
-        rows.pop()
+        worksheet = workbook["Lieder"]
+        rows = list(worksheet.iter_rows(values_only=True))
 
-    if not rows:
-        raise ValueError("Das Tabellenblatt 'Lieder' ist leer.")
+        while rows and all(value is None for value in rows[-1]):
+            rows.pop()
 
-    # Spaltenüberschriften aus der ersten Zeile lesen
-    headers = [
-        str(value).strip() if value is not None else ""
-        for value in rows[0]
-    ]
+        if not rows:
+            raise ValueError("Das Tabellenblatt 'Lieder' ist leer.")
 
-    # Doppelte oder leere Überschriften werden nicht benötigt
-    column_map = {
-        name: index
-        for index, name in enumerate(headers)
-        if name
-    }
+        headers = [
+            str(value).strip() if value is not None else ""
+            for value in rows[0]
+        ]
 
-    required = [
-        "Titel",
-        "Interpret",
-        "Ausgabe 17",
-        "Ausgabe 18",
-        "Ausgabe 19",
-    ]
+        column_map = {
+            name: index
+            for index, name in enumerate(headers)
+            if name
+        }
 
-    missing = [
-        name for name in required
-        if name not in column_map
-    ]
+        required = [
+            "Titel",
+            "Interpret",
+            "Ausgabe 17",
+            "Ausgabe 18",
+            "Ausgabe 19",
+        ]
 
-    if missing:
-        raise ValueError(
-            f"Fehlende Excel-Spalten: {missing}. "
-            f"Gefundene Spalten: {headers}"
-        )
+        missing = [
+            name for name in required
+            if name not in column_map
+        ]
 
-    # Ausschließlich Liedmetadaten übernehmen.
-    # Die Spalte 'Liedtext' wird nicht veröffentlicht.
-    songs = []
+        if missing:
+            raise ValueError(
+                f"Fehlende Spalten: {missing}. "
+                f"Gefundene Spalten: {headers}"
+            )
 
-    for row in rows[1:]:
-        def get_value(name):
-            index = column_map[name]
-            return row[index] if index < len(row) else None
+        songs = []
 
-        title = get_value("Titel")
+        for row in rows[1:]:
+            def get_value(name):
+                index = column_map[name]
+                return row[index] if index < len(row) else None
 
-        if title is None or str(title).strip() == "":
-            continue
+            title = get_value("Titel")
+
+            if title is None or str(title).strip() == "":
+                continue
 
             song = {
                 "id": str(len(songs) + 1),
@@ -122,3 +114,26 @@ try:
                 "ausgabe18": get_value("Ausgabe 18"),
                 "ausgabe19": get_value("Ausgabe 19"),
             }
+
+            for key in ("ausgabe17", "ausgabe18", "ausgabe19"):
+                if song[key] == "":
+                    song[key] = None
+
+            songs.append(song)
+
+    finally:
+        workbook.close()
+
+    # JSON-Datei schreiben; Liedtexte werden nicht übernommen
+    output = Path("lieder.json")
+    output.write_text(
+        json.dumps(songs, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    print(f"{len(songs)} Lieder erfolgreich verarbeitet.")
+    print("Liedtexte wurden nicht in lieder.json übernommen.")
+
+
+if __name__ == "__main__":
+    main()
