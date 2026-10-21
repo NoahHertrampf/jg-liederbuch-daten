@@ -15,10 +15,19 @@ def main():
     with tempfile.TemporaryDirectory() as temp_dir:
         excel_path = Path(temp_dir) / "lieder.xlsx"
 
-        download_url = EXCEL_URL
-        if "download=1" not in download_url:
-            separator = "&" if "?" in download_url else "?"
-            download_url += separator + "download=1"
+        # OneDrive-Freigabelink in eine API-Download-Adresse umwandeln
+        import base64
+
+        share_token = (
+            base64.urlsafe_b64encode(EXCEL_URL.encode("utf-8"))
+            .decode("ascii")
+            .rstrip("=")
+        )
+        share_id = "u!" + share_token
+        download_url = (
+            f"https://api.onedrive.com/v1.0/shares/"
+            f"{share_id}/root/content"
+        )
 
         request = urllib.request.Request(
             download_url,
@@ -33,8 +42,7 @@ def main():
 
         if not file_data.startswith(b"PK"):
             raise ValueError(
-                "OneDrive hat keine Excel-Datei geliefert. "
-                "Bitte Freigabelink und Download prüfen."
+                "OneDrive hat keine gültige Excel-Datei geliefert."
             )
 
         excel_path.write_bytes(file_data)
