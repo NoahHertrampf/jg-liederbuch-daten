@@ -49,24 +49,18 @@ workbook = load_workbook(
 
 worksheet = workbook["Lieder"]
 
-# Excel-Tabelle finden
-if "Table1" in worksheet.tables:
-    table_ref = worksheet.tables["Table1"].ref
-    from openpyxl.utils.cell import range_boundaries
+# Excel-Zeilen einschließlich Überschriften auslesen
 
-    min_col, min_row, max_col, max_row = range_boundaries(table_ref)
+rows = list(worksheet.iter_rows(values_only=True))
 
-    rows = list(
-        worksheet.iter_rows(
-            min_row=min_row,
-            max_row=max_row,
-            min_col=min_col,
-            max_col=max_col,
-            values_only=True
-        )
-    )
-else:
-    rows = list(worksheet.iter_rows(values_only=True))
+# Leere Zeilen am Ende entfernen
+
+while rows and all(value is None for value in rows[-1]):
+rows.pop()
+
+if not rows:
+raise ValueError("Das Tabellenblatt 'Lieder' ist leer.")
+
 
 headers = [str(value or "").strip() for value in rows[0]]
 column_map = {name: index for index, name in enumerate(headers)}
