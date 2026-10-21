@@ -1,4 +1,3 @@
-```python
 import json
 import os
 import tempfile
@@ -65,4 +64,3 @@ def main():
 
         if missing:
             raise ValueEr
-```
