@@ -1,15 +1,6 @@
 [
   {
     "id": "1",
-    "titel": "Mein Lied",
-    "interpret": "Interpret A",
-    "liedtext": "Testtext",
-    "ausgabe17": 42,
-    "ausgabe18": 56,
-    "ausgabe19": 61
-  },
-  {
-    "id": "2",
     "titel": "Mutig komm ich vor den Thron",
     "interpret": "Urban Life Worship",
     "liedtext": "",
@@ -18,7 +9,7 @@
     "ausgabe19": 1
   },
   {
-    "id": "3",
+    "id": "2",
     "titel": "Wie schön dieser Name ist",
     "interpret": "Ben Fielding, Brooke Fraser Ligertwood, Sheila Geisinger, Sophia Henckell, Ellen Röwer",
     "liedtext": "",
@@ -27,7 +18,7 @@
     "ausgabe19": 2
   },
   {
-    "id": "4",
+    "id": "3",
     "titel": "Du bist wunderbar",
     "interpret": "Mike Chance, Matt Hellyer",
     "liedtext": "",
