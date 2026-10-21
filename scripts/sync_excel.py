@@ -7,12 +7,13 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import requests
 from openpyxl import load_workbook
 
-def main():
-# OneDrive-Freigabelink aus den GitHub Secrets lesen
-share_url = os.environ.get("ONEDRIVE_EXCEL_URL", "").strip()
 
-if not share_url:
-    raise ValueError("Das GitHub Secret ONEDRIVE_EXCEL_URL fehlt.")
+def main():
+    # OneDrive-Freigabelink aus den GitHub Secrets lesen
+    share_url = os.environ.get("ONEDRIVE_EXCEL_URL", "").strip()
+
+    if not share_url:
+        raise ValueError("Das GitHub Secret ONEDRIVE_EXCEL_URL fehlt.")
 
 # OneDrive-Link für einen Downloadversuch vorbereiten
 parts = urlparse(share_url)
