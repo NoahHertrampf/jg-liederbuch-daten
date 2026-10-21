@@ -50,17 +50,14 @@ workbook = load_workbook(
 worksheet = workbook["Lieder"]
 
 # Excel-Zeilen einschließlich Überschriften auslesen
-
 rows = list(worksheet.iter_rows(values_only=True))
 
 # Leere Zeilen am Ende entfernen
-
 while rows and all(value is None for value in rows[-1]):
     rows.pop()
 
 if not rows:
-raise ValueError("Das Tabellenblatt 'Lieder' ist leer.")
-
+    raise ValueError("Das Tabellenblatt 'Lieder' ist leer.")
 
 headers = [str(value or "").strip() for value in rows[0]]
 column_map = {name: index for index, name in enumerate(headers)}
