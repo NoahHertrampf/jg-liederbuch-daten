@@ -770,7 +770,187 @@
     "interpret": "Arne Kopfermann, Matt Redman, Tim Wanstall,  Jason Ingram",
     "liedtext": "",
     "ausgabe17": null,
-    "ausgabe18": null,
+    "ausgabe18": 81,
     "ausgabe19": null
+  },
+  {
+    "id": "87",
+    "titel": "Never Run Dry",
+    "interpret": "Pat Barrett, Nate Moore, Tony Brown",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 82,
+    "ausgabe19": null
+  },
+  {
+    "id": "88",
+    "titel": "Du bist gut",
+    "interpret": "Anette Sorge, Brian Johnson, Jeremy Riddle",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 83,
+    "ausgabe19": 83
+  },
+  {
+    "id": "89",
+    "titel": "Let It Be Known",
+    "interpret": "Nick Herbert, Tim Hughes, Tom Smith",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 84,
+    "ausgabe19": null
+  },
+  {
+    "id": "90",
+    "titel": "Liebe, die alles riskiert",
+    "interpret": "Martin Bruch, Ony Heckmann, Brooke & Scott Ligertwood, Aryel Murphy",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 85,
+    "ausgabe19": null
+  },
+  {
+    "id": "91",
+    "titel": "Vertrauen",
+    "interpret": "Ellen Röwer, Sara Kliever, Pat Kliever, Aodhan King, Ben Tan, Melodie Wagner",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 86,
+    "ausgabe19": null
+  },
+  {
+    "id": "92",
+    "titel": "Was macht mir Angst",
+    "interpret": "Arne Kopfermann, Klaus Osigus, Ed Cash, Scott Cash, Chris Tomlin",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 87,
+    "ausgabe19": null
+  },
+  {
+    "id": "93",
+    "titel": "Throne Room",
+    "interpret": "Mia Fieldes, Jacob Sooter, Lindsey Sweat, Kim Walker-Smith",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 88,
+    "ausgabe19": null
+  },
+  {
+    "id": "94",
+    "titel": "O Come to the Altar",
+    "interpret": "Mack Brock, Chris Brown, Steven Furtick, Wade Joye",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 89,
+    "ausgabe19": 89
+  },
+  {
+    "id": "95",
+    "titel": "Extravagant",
+    "interpret": "Amanda Cook, Sean Feucht, Steffany Gretzinger, Ran Jackson",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 90,
+    "ausgabe19": null
+  },
+  {
+    "id": "96",
+    "titel": "Die Liebe des Retters",
+    "interpret": "Mia Friesen, Stefan Schöpfle",
+    "liedtext": "",
+    "ausgabe17": 91,
+    "ausgabe18": 91,
+    "ausgabe19": 91
+  },
+  {
+    "id": "97",
+    "titel": "Ich tauch ein",
+    "interpret": "Martin Bruch, Joel Davies, Aodhan King",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 92,
+    "ausgabe19": 35
+  },
+  {
+    "id": "98",
+    "titel": "Set a Fire",
+    "interpret": "Will Reagan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 93,
+    "ausgabe19": 93
+  },
+  {
+    "id": "99",
+    "titel": "Kein Ort",
+    "interpret": "Jonathan Fabian, Timo Scheven, Will Reagan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 93,
+    "ausgabe19": 94
+  },
+  {
+    "id": "100",
+    "titel": "Reckless Love",
+    "interpret": "Cory Asbury, Caleb Culver, Ran Jackson",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 94,
+    "ausgabe19": null
+  },
+  {
+    "id": "101",
+    "titel": "This is Amazing Grace",
+    "interpret": "Josh Farro, Jeremy Riddle, Phil Wickham",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 95,
+    "ausgabe19": null
+  },
+  {
+    "id": "102",
+    "titel": "Du machst alles neu (This Is What You Do)",
+    "interpret": "Daniel Harter, Jeremy Riddle, Matt Stinton",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 96,
+    "ausgabe19": null
+  },
+  {
+    "id": "103",
+    "titel": "Neues Leben",
+    "interpret": "Lea Rauschmaier, Bastian Rauschmaier",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 97,
+    "ausgabe19": null
+  },
+  {
+    "id": "104",
+    "titel": "Holy Spirit",
+    "interpret": "Bryan Torwalt, Katie Torwalt",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 98,
+    "ausgabe19": 98
+  },
+  {
+    "id": "105",
+    "titel": "Jesus I Come",
+    "interpret": "Christopher Brown, Steven Furtick",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 99,
+    "ausgabe19": null
+  },
+  {
+    "id": "106",
+    "titel": "Das Glaube Ich",
+    "interpret": "Martin Bruch, Dennis Strehl, Matt Crocker, Ben Fielding",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 100,
+    "ausgabe19": 100
   }
 ]
