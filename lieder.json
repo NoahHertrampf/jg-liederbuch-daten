@@ -25,5 +25,50 @@
     "ausgabe17": 152,
     "ausgabe18": 3,
     "ausgabe19": null
+  },
+  {
+    "id": "4",
+    "titel": "So bist nur du",
+    "interpret": "Albert Frey, Arne Kopfermann, Jonas Myrin, Matt Redman, Jesse Reeves, Chris Tomlin",
+    "liedtext": "",
+    "ausgabe17": 4,
+    "ausgabe18": 4,
+    "ausgabe19": null
+  },
+  {
+    "id": "5",
+    "titel": "The Lion and the Lamb",
+    "interpret": "Brenton Brown, Brian Johnson, Leeland Mooring",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 5,
+    "ausgabe19": null
+  },
+  {
+    "id": "6",
+    "titel": "Der Löwe und das Lamm",
+    "interpret": "Brenton Brown, Brian Johnson, Leeland Mooring, Sandra Dittman",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 5,
+    "ausgabe19": 5
+  },
+  {
+    "id": "7",
+    "titel": "Vater unser",
+    "interpret": "Theo Evers, Timo Langner",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 6,
+    "ausgabe19": 6
+  },
+  {
+    "id": "8",
+    "titel": "Der Einzige",
+    "interpret": "Mia Friesen, Stefan Schöpfle",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 7,
+    "ausgabe19": 7
   }
 ]
