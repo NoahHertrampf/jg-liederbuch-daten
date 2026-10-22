@@ -1231,5 +1231,50 @@
     "ausgabe17": null,
     "ausgabe18": 130,
     "ausgabe19": 115
+  },
+  {
+    "id": "138",
+    "titel": "Wunderbarer Gott",
+    "interpret": "Timo Langner",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": 3
+  },
+  {
+    "id": "139",
+    "titel": "Oh am Kreuz",
+    "interpret": "Mia Friesen, Stefan Schöpfle",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": 4
+  },
+  {
+    "id": "140",
+    "titel": "The Stand",
+    "interpret": "Joel Houston",
+    "liedtext": "",
+    "ausgabe17": 168,
+    "ausgabe18": null,
+    "ausgabe19": 11
+  },
+  {
+    "id": "141",
+    "titel": "Golgatha",
+    "interpret": "Benjamin Burbulla, Lukas Dopfer",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": 12
+  },
+  {
+    "id": "142",
+    "titel": "Dir nah zu sein",
+    "interpret": "Johannes Beering, Markus Fackler, Joy Fackler",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": 13
   }
 ]
