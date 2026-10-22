@@ -952,5 +952,122 @@
     "ausgabe17": null,
     "ausgabe18": 100,
     "ausgabe19": 100
+  },
+  {
+    "id": "107",
+    "titel": "Der Weg",
+    "interpret": "Daniela Hogger, Ben Cantelon, Nick Herbert, Tim Hughes",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 101,
+    "ausgabe19": null
+  },
+  {
+    "id": "108",
+    "titel": "My Lighthouse",
+    "interpret": "Rend Collective, Gareth Gilkeson, Chris Llewellyn",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 102,
+    "ausgabe19": 102
+  },
+  {
+    "id": "109",
+    "titel": "Take Courage",
+    "interpret": "Jeremy Riddle, Joel Taylor, Kristene DiMarco",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 103,
+    "ausgabe19": null
+  },
+  {
+    "id": "110",
+    "titel": "Overcome",
+    "interpret": "Mack Brock, Chris Brown, Steven Furtick",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 104,
+    "ausgabe19": null
+  },
+  {
+    "id": "111",
+    "titel": "Was für ein Gott",
+    "interpret": "Winnie Schweitzer, Reuben Morgan",
+    "liedtext": "",
+    "ausgabe17": 143,
+    "ausgabe18": 105,
+    "ausgabe19": 105
+  },
+  {
+    "id": "112",
+    "titel": "Praise The Lord (Evermore)",
+    "interpret": "Sam Bailey, Ben Cantelon, Nick Herbert, Anna Hellebronth",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 106,
+    "ausgabe19": null
+  },
+  {
+    "id": "113",
+    "titel": "Only Wanna Sing",
+    "interpret": "Michael Fatkin, Aodhan King, Ben Tan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 107,
+    "ausgabe19": 107
+  },
+  {
+    "id": "114",
+    "titel": "Mittelpunkt",
+    "interpret": "Juri Friesen, Pala Friesen",
+    "liedtext": "",
+    "ausgabe17": 108,
+    "ausgabe18": 108,
+    "ausgabe19": 108
+  },
+  {
+    "id": "115",
+    "titel": "King Of My Heart",
+    "interpret": "John Mark McMillan, Sarah McMillan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 109,
+    "ausgabe19": null
+  },
+  {
+    "id": "116",
+    "titel": "Love So Great",
+    "interpret": "Joshua Grimmett, Reuben Morgan, Jamie Snell",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 110,
+    "ausgabe19": null
+  },
+  {
+    "id": "117",
+    "titel": "Liebe so groß",
+    "interpret": "Joshua Grimmett, Reuben Morgan, Jamie Snell, Hanna Bruch, Jonas Burn, Ellen Röwer",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 110,
+    "ausgabe19": null
+  },
+  {
+    "id": "118",
+    "titel": "Wir sind eins",
+    "interpret": "Mia Friesen, Pala Friesen",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 111,
+    "ausgabe19": null
+  },
+  {
+    "id": "119",
+    "titel": "Fortress",
+    "interpret": "Mack Brock, Steven Furtick, Wade Joye, London Gatch, Christopher Brown",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 112,
+    "ausgabe19": null
   }
 ]
