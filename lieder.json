@@ -70,5 +70,140 @@
     "ausgabe17": null,
     "ausgabe18": 7,
     "ausgabe19": 7
+  },
+  {
+    "id": "9",
+    "titel": "Du bist genug",
+    "interpret": "Martin Bruch, Dennis Strehl, Reuben Morgan, Jonas Myrin",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 8,
+    "ausgabe19": 8
+  },
+  {
+    "id": "10",
+    "titel": "Bis ich dir gegenübersteh'",
+    "interpret": "Marcus Jakob, Jadwin Gillies, Joel Houston",
+    "liedtext": "",
+    "ausgabe17": 9,
+    "ausgabe18": 9,
+    "ausgabe19": 9
+  },
+  {
+    "id": "11",
+    "titel": "Zu dir",
+    "interpret": "Daniel Harter, Bettina Martens, Daniel Zimmermann",
+    "liedtext": "",
+    "ausgabe17": 167,
+    "ausgabe18": 10,
+    "ausgabe19": 10
+  },
+  {
+    "id": "12",
+    "titel": "Alle Augen auf dich",
+    "interpret": "Daniel Harter, Michael Schlüter, Tobi Wörner",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 11,
+    "ausgabe19": null
+  },
+  {
+    "id": "13",
+    "titel": "Simple Gospel",
+    "interpret": "Will Reagan, Brock Human",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 12,
+    "ausgabe19": null
+  },
+  {
+    "id": "14",
+    "titel": "Who Am I",
+    "interpret": "Mark Hall",
+    "liedtext": "",
+    "ausgabe17": 147,
+    "ausgabe18": 13,
+    "ausgabe19": null
+  },
+  {
+    "id": "15",
+    "titel": "Zehntausend Gründe",
+    "interpret": "David Hanheiser, David Schnitter, Jonas Myrin, Matt Redman",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 14,
+    "ausgabe19": 14
+  },
+  {
+    "id": "16",
+    "titel": "Auferstehung",
+    "interpret": "Martin Bruch, Brooke & Scott Ligertwood",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 15,
+    "ausgabe19": null
+  },
+  {
+    "id": "17",
+    "titel": "Auferstehen",
+    "interpret": "Salvatore Gangi, Sara Lorenz-Bohlen, Mack Brock, Christopher Brown, Steven Furtick, Wade Joye, Matthew Ntlele",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 16,
+    "ausgabe19": 17
+  },
+  {
+    "id": "18",
+    "titel": "Forever (We Sing Hallelujah)",
+    "interpret": "Christa Black Gifford, Kari Jobe, Brian Johnson, Jenn Johnson, Joel Taylor, Gabriel Wilson",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 17,
+    "ausgabe19": null
+  },
+  {
+    "id": "19",
+    "titel": "Simple Pursuit",
+    "interpret": "Ben Cantelon, Nick Herbert, Matt Redman, Sam Bailey",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 18,
+    "ausgabe19": null
+  },
+  {
+    "id": "20",
+    "titel": "You Make Me Brave",
+    "interpret": "Amanda Cook",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 19,
+    "ausgabe19": null
+  },
+  {
+    "id": "21",
+    "titel": "Jedes Wort von dir",
+    "interpret": "Lothar Kosse",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 20,
+    "ausgabe19": null
+  },
+  {
+    "id": "22",
+    "titel": "Every Giant Will Fall",
+    "interpret": "Rend Collective",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 21,
+    "ausgabe19": null
+  },
+  {
+    "id": "23",
+    "titel": "It is well",
+    "interpret": "Horatio Gates Spafford (1828-1888), Philip Paul Bliss (1838-1876), Kristene DiMarco",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": null
   }
 ]
