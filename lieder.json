@@ -275,7 +275,88 @@
     "interpret": "Martin Bruch, Matt Crocker, Joel Houston, Salomon Ligthelm",
     "liedtext": "",
     "ausgabe17": null,
-    "ausgabe18": null,
+    "ausgabe18": 29,
+    "ausgabe19": null
+  },
+  {
+    "id": "32",
+    "titel": "Come To The River",
+    "interpret": "Pat Barrett, Nate Moore, Tony Brown, David Dalton",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 30,
+    "ausgabe19": null
+  },
+  {
+    "id": "33",
+    "titel": "The More I Seek You",
+    "interpret": "Zach Neese",
+    "liedtext": "",
+    "ausgabe17": 189,
+    "ausgabe18": 31,
+    "ausgabe19": 31
+  },
+  {
+    "id": "34",
+    "titel": "Nimm mein Herz",
+    "interpret": "Martin Mroncz, Louie Giglio, Jason Ingram, Chris Tomlin",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 32,
+    "ausgabe19": 32
+  },
+  {
+    "id": "35",
+    "titel": "Über alles",
+    "interpret": "Könige & Priester",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 33,
+    "ausgabe19": null
+  },
+  {
+    "id": "36",
+    "titel": "Mein ganzes Leben",
+    "interpret": "Bodo Klose",
+    "liedtext": "",
+    "ausgabe17": 142,
+    "ausgabe18": 34,
+    "ausgabe19": 34
+  },
+  {
+    "id": "37",
+    "titel": "How He Loves",
+    "interpret": "John Mark McMillan",
+    "liedtext": "",
+    "ausgabe17": 35,
+    "ausgabe18": 35,
+    "ausgabe19": null
+  },
+  {
+    "id": "38",
+    "titel": "Dort am Kreuz",
+    "interpret": "Edgar Breitenbach, Lara Neumann, Simon Wilhelm",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 36,
+    "ausgabe19": 36
+  },
+  {
+    "id": "39",
+    "titel": "Befreit durch deine Gnade",
+    "interpret": "Claus-Peter Eberwein, Juliane Eva Eberwein",
+    "liedtext": "",
+    "ausgabe17": 7,
+    "ausgabe18": 37,
+    "ausgabe19": 37
+  },
+  {
+    "id": "40",
+    "titel": "Allein aus Gnade",
+    "interpret": "Mitch Schlüter",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 38,
     "ausgabe19": null
   }
 ]
