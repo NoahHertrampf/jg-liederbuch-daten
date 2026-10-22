@@ -1069,5 +1069,113 @@
     "ausgabe17": null,
     "ausgabe18": 112,
     "ausgabe19": null
+  },
+  {
+    "id": "120",
+    "titel": "Wir vertrauen Gott",
+    "interpret": "Martin Bruch, Ben Fielding, Eric Liljero, Reuben Morgan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 113,
+    "ausgabe19": null
+  },
+  {
+    "id": "121",
+    "titel": "Great Are You Lord",
+    "interpret": "Jason Ingram, Leslie Jordan, David Leonard",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 114,
+    "ausgabe19": null
+  },
+  {
+    "id": "122",
+    "titel": "Dann Auch Ich",
+    "interpret": "Sheila Geisinger, Sophia Henckell, Ellen Röwer, Michael Fatkin, Benjamin Hastings, Joel Houston",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 115,
+    "ausgabe19": null
+  },
+  {
+    "id": "123",
+    "titel": "Du großer Gott",
+    "interpret": "Carl Boberg (1859-1940), Manfred Siebald, schwedische Melodie",
+    "liedtext": "Du großer Gott, wenn ich die Welt betrachte,\ndie Du geschaffen durch Dein Allmachtswort,\nwenn ich auf alle jene Wesen achte,\ndie Du regierst und nährest fort und fort, …",
+    "ausgabe17": 182,
+    "ausgabe18": 116,
+    "ausgabe19": null
+  },
+  {
+    "id": "124",
+    "titel": "Vater des Lichts",
+    "interpret": "Irene Heidenreich, Stephanie Heinen, Thomas Tetzlaff, John Barnett",
+    "liedtext": "",
+    "ausgabe17": 126,
+    "ausgabe18": 117,
+    "ausgabe19": null
+  },
+  {
+    "id": "125",
+    "titel": "So groß ist der Herr",
+    "interpret": "Arne Kopfermann, Ed Cash, Jesse Reeves, Chris Tomlin",
+    "liedtext": "",
+    "ausgabe17": 138,
+    "ausgabe18": 118,
+    "ausgabe19": 118
+  },
+  {
+    "id": "126",
+    "titel": "Wunder",
+    "interpret": "Klaus Osigus, Stuart Garrard, Chris Quilala, Joshua Silverberg, Dustin Smith",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 119,
+    "ausgabe19": null
+  },
+  {
+    "id": "127",
+    "titel": "In Christus ist mein ganzer Halt",
+    "interpret": "Guido Baltes, Keith Getty, Stuart Townend",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 120,
+    "ausgabe19": null
+  },
+  {
+    "id": "128",
+    "titel": "Wir lieben deinen Namen",
+    "interpret": "Veronika Lohmer, Sebastian Lohmer",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 121,
+    "ausgabe19": null
+  },
+  {
+    "id": "129",
+    "titel": "Heilig, heilig das Lamm Gottes",
+    "interpret": "Juri Friesen, Jennie Lee Riddle",
+    "liedtext": "",
+    "ausgabe17": 164,
+    "ausgabe18": 122,
+    "ausgabe19": null
+  },
+  {
+    "id": "130",
+    "titel": "Fullness",
+    "interpret": "Christopher Brown, Steven Furtick, Matthew Ntlele",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 123,
+    "ausgabe19": null
+  },
+  {
+    "id": "131",
+    "titel": "After All (Holy)",
+    "interpret": "Matt Maher, David Crowder, Mark Waldrop, Mike Dodson",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": null,
+    "ausgabe19": null
   }
 ]
