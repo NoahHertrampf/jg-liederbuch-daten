@@ -1174,8 +1174,62 @@
     "titel": "After All (Holy)",
     "interpret": "Matt Maher, David Crowder, Mark Waldrop, Mike Dodson",
     "liedtext": "",
-    "ausgabe17": null,
-    "ausgabe18": null,
+    "ausgabe17": 5,
+    "ausgabe18": 124,
     "ausgabe19": null
+  },
+  {
+    "id": "132",
+    "titel": "Treu bist du, Herr",
+    "interpret": "Simon Wilhelm, Tony Brown, Chris McClarney, Nate Moore",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 125,
+    "ausgabe19": null
+  },
+  {
+    "id": "133",
+    "titel": "Künstler dieser Welt",
+    "interpret": "Mitch Schlüter, Martin Denzin",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 126,
+    "ausgabe19": null
+  },
+  {
+    "id": "134",
+    "titel": "Even So Come",
+    "interpret": "Jess Cates, Jason Ingram, Chris Tomlin",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 127,
+    "ausgabe19": null
+  },
+  {
+    "id": "135",
+    "titel": "Jahwe",
+    "interpret": "Melina Lörracher, Reuben Morgan",
+    "liedtext": "",
+    "ausgabe17": 128,
+    "ausgabe18": 128,
+    "ausgabe19": null
+  },
+  {
+    "id": "136",
+    "titel": "Ever Be",
+    "interpret": "Chris Greely, Kalley Heiligenthal, Bobby Strand, Gabriel Wilson",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 129,
+    "ausgabe19": null
+  },
+  {
+    "id": "137",
+    "titel": "One Thing Remains (Your Love Never Fails)",
+    "interpret": "Christa Black Gifford, Brian Johnson, Jeremy Riddle",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 130,
+    "ausgabe19": 115
   }
 ]
