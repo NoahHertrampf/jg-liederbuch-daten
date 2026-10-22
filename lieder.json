@@ -100,7 +100,7 @@
   },
   {
     "id": "12",
-    "titel": "Alle Augen auf dich",
+    "titel": "Alle Augen auf Dich",
     "interpret": "Daniel Harter, Michael Schlüter, Tobi Wörner",
     "liedtext": "",
     "ausgabe17": null,
@@ -199,8 +199,80 @@
   },
   {
     "id": "23",
-    "titel": "It is well",
+    "titel": "It Is Well",
     "interpret": "Horatio Gates Spafford (1828-1888), Philip Paul Bliss (1838-1876), Kristene DiMarco",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 22,
+    "ausgabe19": null
+  },
+  {
+    "id": "24",
+    "titel": "Even When It Hurts (Praise Song)",
+    "interpret": "Joel Houston",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 23,
+    "ausgabe19": null
+  },
+  {
+    "id": "25",
+    "titel": "Good, Good Father",
+    "interpret": "Pat Barrett, Anthony Brown",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 24,
+    "ausgabe19": 23
+  },
+  {
+    "id": "26",
+    "titel": "From The Inside Out",
+    "interpret": "Joel Houston",
+    "liedtext": "",
+    "ausgabe17": 25,
+    "ausgabe18": 25,
+    "ausgabe19": 25
+  },
+  {
+    "id": "27",
+    "titel": "Break Every Chain",
+    "interpret": "Will Reagan",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 26,
+    "ausgabe19": 26
+  },
+  {
+    "id": "28",
+    "titel": "Cornerstone",
+    "interpret": "Edward Mote, Eric Liljero, Reuben Morgan, Jonas Myrin",
+    "liedtext": "",
+    "ausgabe17": 151,
+    "ausgabe18": 27,
+    "ausgabe19": 27
+  },
+  {
+    "id": "29",
+    "titel": "Go",
+    "interpret": "Luca Aprile, Dave Kull",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 28,
+    "ausgabe19": 28
+  },
+  {
+    "id": "30",
+    "titel": "Oceans (Where Feet May Fail)",
+    "interpret": "Matt Crocker, Joel Houston, Salomon Ligthelm",
+    "liedtext": "",
+    "ausgabe17": null,
+    "ausgabe18": 29,
+    "ausgabe19": 29
+  },
+  {
+    "id": "31",
+    "titel": "Meer",
+    "interpret": "Martin Bruch, Matt Crocker, Joel Houston, Salomon Ligthelm",
     "liedtext": "",
     "ausgabe17": null,
     "ausgabe18": null,
